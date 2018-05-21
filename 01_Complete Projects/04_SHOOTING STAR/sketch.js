@@ -21,6 +21,10 @@ function draw() {
   addLoverForce();
   addHaterForce();
 
+  textSize(14);
+  textFont('courier');
+  text("Move mouse to travel space.", 20, 40);
+
   fill(255, 80, 120,);
   for (var i = 0; i < 20; i++){
     lover.update();
