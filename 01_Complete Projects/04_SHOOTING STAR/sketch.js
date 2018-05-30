@@ -79,7 +79,7 @@ function addLoverForce() {
 }
 
 function addHaterForce() {
-  for (var i=0; i<haters.length; i++) {
+  for (var i = 0; i < haters.length; i++) {
     var loverLoc = lover.loc.copy();
     var haterLoc = haters[i].loc.copy();
     var diff = haterLoc.sub(loverLoc);
