@@ -3,8 +3,8 @@ class BouncingBall {
     this.x = x;
     this.y = y;
     this.size = size;
-    this.speedX = speedX;
-    this.speedY = speedY;
+    this.speedX = random(-5, 5);
+    this.speedY = random(-5, 5);
     this.color = color;
   }
 
@@ -15,6 +15,7 @@ class BouncingBall {
 
   display() {
     ellipse(this.x, this.y, this.size, this.size);
+    noStroke();
     fill(this.color);
   }
 
@@ -26,4 +27,12 @@ class BouncingBall {
       this.speedY *= -1;
     }
   }
+
+  clicked(){
+    let d = dist(mouseX, mouseY, this.x, this.y);
+    if (d < this.size){
+      console.log("clicked on balls!");
+    }
+  }
+
 }

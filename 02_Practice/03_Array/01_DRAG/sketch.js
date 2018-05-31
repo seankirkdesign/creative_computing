@@ -1,35 +1,28 @@
 var ball = [];
 
 function setup() {
-  createCanvas(500, 500);
-  for (var i = 0; i < 400; i++){
-    var ii = i * 0.1;
-    ball[i] = new BouncingBall (
-      random(width),
-      random(height),
-      50,
-      ii,
-      ii,
-      random(255));
-  }
+  createCanvas(windowWidth, windowHeight);
+
 }
 
+
 function mousePressed() {
-  b = new BouncingBall(
-    random(width),
-    random(height),
-    50,
-    ii,
-    ii,
+  //ball.clicked();
+  var b = new BouncingBall(
+    mouseX,
+    mouseY,
+    40,
+    2,
+    5,
     random(255));
-    
+
   ball.push(b);
 }
 
 function draw() {
-  background(200);
+  background(245);
 
-  for (var i = 0; i < 10; i++){
+  for (var i = 0; i < ball.length; i++){
     ball[i].move();
     ball[i].display();
     ball[i].bounce();
