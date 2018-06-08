@@ -5,8 +5,7 @@ function setup() {
 
 }
 
-
-function mousePressed() {
+function mouseDragged() {
   //ball.clicked();
   var b = new BouncingBall(
     mouseX,
