@@ -5,39 +5,57 @@ var ballXSpeed = 0;
 var ballYSpeed = 0;
 
 var currentSpeed;
+var displaySpeed;
 
 var radius;
 
+var img;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  ballX = windowWidth/2;
-  ballY = windowHeight/2;
-  radius = 2;
-
-
+  ballX = width/2;
+  ballY = height/2;
+  radius = 2.5;
 }
 
 function draw() {
-  currentSpeed = ballXSpeed + ballYSpeed;
-  if(currentSpeed < 0){
-    currentSpeed *= -1;
-  }
-  text('Press W A S D to Move', 20, 40);
-  text('current speed: '+(currentSpeed * 122.2)+'mph', 20, 60);
-
-  text('current location: '+ballX+','+ballY, 20, 100);
   background(204, 0, 0, 10);
-  display();
+  displayInfo();
+
+  displayIM();
+
+  displayMouse();
   wallHit();
+
+  if (mouseIsPressed){
+    line (ballX, ballY, mouseX, mouseY);
+  }
 }
 
-function display (){
+function displayIM (){
     noStroke();
     fill(255);
     ellipse(ballX,ballY, radius*2);
     ballX += ballXSpeed;
     ballY += ballYSpeed;
 }
+
+function displayInfo (){
+  fill(255);
+  textFont('Helvetica');
+  textSize(10);
+  text('Desktop use only.', 20, 20);
+
+  currentSpeed = abs(ballXSpeed) + abs(ballYSpeed);
+  textFont('Krona One');
+  textSize(15);
+  fill(255);
+  text('Press W A S D to Move', 20, 60);
+  text('Click mouse to shoot', 20, 80)
+  text('Speed: '+currentSpeed+'k mph', 20, height - 20);
+  text('Location: '+ballX+'.'+ballY, 20, height - 40);
+}
+
 
 function wallHit(){
   if (ballX > width || ballX < 0){
@@ -69,6 +87,18 @@ function keyPressed() {
   }
 }
 
-function mouseClicked() {
-
+function displayMouse() {
+  noCursor();
+  noFill();
+  strokeWeight(.5);
+  stroke(255);
+  ellipse(mouseX, mouseY, 30, 30);
+  ellipse(mouseX, mouseY, 1, 1);
 }
+
+
+
+//
+// function mousePressed() {
+//
+// }
