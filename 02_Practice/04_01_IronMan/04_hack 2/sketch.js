@@ -5,11 +5,8 @@ var ballXSpeed = 0;
 var ballYSpeed = 0;
 
 var currentSpeed;
-var displaySpeed;
 
 var radius;
-
-var img;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -19,17 +16,13 @@ function setup() {
 }
 
 function draw() {
-  background(204, 0, 0, 10);
+  background(204, 0, 0, 50);
   displayInfo();
 
   displayIM();
-
   displayMouse();
   wallHit();
-
-  if (mouseIsPressed){
-    line (ballX, ballY, mouseX, mouseY);
-  }
+  mouseClicked();
 }
 
 function displayIM (){
@@ -92,13 +85,28 @@ function displayMouse() {
   noFill();
   strokeWeight(.5);
   stroke(255);
-  ellipse(mouseX, mouseY, 30, 30);
-  ellipse(mouseX, mouseY, 1, 1);
+  ellipse(mouseX + random(-3, 3), mouseY + random (-3, 3), 30, 30);
+  ellipse(mouseX + random(-3, 3), mouseY + random (-3, 3), 1, 1);
 }
 
+function mouseClicked() {
+  if (mouseIsPressed){
+    push();
+    strokeWeight(7);
+    stroke(120,150,160,40);
+    line (ballX, ballY, mouseX  + random (-5, 5), mouseY  + random (-5, 5));
+    pop();
 
+    push();
+    strokeWeight(5);
+    stroke(140,150,160);
+    line (ballX, ballY, mouseX  + random (-5, 5), mouseY  + random (-5, 5));
+    pop();
 
-//
-// function mousePressed() {
-//
-// }
+    push();
+    strokeWeight(2);
+    stroke(255);
+    line (ballX, ballY, mouseX, mouseY);
+    pop();
+  }
+}
