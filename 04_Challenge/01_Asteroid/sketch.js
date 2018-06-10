@@ -1,30 +1,40 @@
-var ironMan;
-var enemy;
-
-
+var ship;
+var asteroids = [];
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  ship = new Ship();
 
-  ironMan = new IronMan(width/2, height/2, 5, 0,0);
-  enemy = new Enemy(500,500,20);
+  for (var i = 0; i < 5; i++){
+    asteroids.push(new Asteroid());
+  }
 
 }
 
 function draw() {
-  background(204, 0, 0, 50);
+  background(0);
+  ship.render();
+  ship.turn();
+  ship.update();
+  ship.edges();
 
-  //Iron Man
-  ironMan.displayInfo();
-  ironMan.mouseClicked();
-  ironMan.wallHit();
-  ironMan.displayMouse();
-  ironMan.displayIM();
-
-  //Enemy
-  enemy.displayEnemy();
+  for (var i = 0; i < asteroids.length ;i++) {
+    asteroids[i].render();
+    asteroids[i].update();
+    asteroids[i].edges();    
+  }
 }
 
+function keyReleased() {
+  ship.setRotation(0);
+  ship.boosting(false);
+}
 
 function keyPressed() {
-  ironMan.power();
+  if(keyCode == RIGHT_ARROW) {
+    ship.setRotation(0.1);
+  } else if (keyCode == LEFT_ARROW) {
+    ship.setRotation(-0.1);
+  } else if (keyCode == UP_ARROW) {
+    ship.boosting(true);
+  }
 }
