@@ -5,7 +5,7 @@ var enemy;
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  ironMan = new IronMan(width/2, height/2, 5, 0,0);
+  ironMan = new IronMan();
   enemy = new Enemy(500,500,20);
 
 }

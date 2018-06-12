@@ -1,14 +1,15 @@
-class IronMan {
-  constructor(ironManX, ironManY, size, ironManXSpeed, ironManYSpeed) {
-    this.x = ironManX;
-    this.y = ironManY;
-    this.size = size;
-    this.xSpeed = ironManXSpeed;
-    this.ySpeed = ironManYSpeed;
-  }
+function IronMan() {
+ this.pos = createVector(width/2, height/2);
+ this.x = 0;
+ this.y = 0;
+ this.size = 5;
+ this.xSpeed = 0;
+ this.ySpeed = 0;
+
+
 
 //Iron Man Object
-  displayIM (){
+  this.displayIM = function(){
     noStroke();
     fill(255);
     ellipse(this.x, this.y, this.size, this.size);
@@ -16,8 +17,26 @@ class IronMan {
     this.y += this.ySpeed
   }
 
-// //Bounce
-  wallHit(){
+  this.boosting = function(b) {
+    this.isBoosting = b;
+  }
+
+  this.update = function() {
+    if (this.isBoosting){
+      this.boost();
+    }
+    this.pos.add(this.vel);
+    this.vel.mult(0.99);
+  }
+
+  this.boost = function(){
+    var force
+    force.mult(0.1);
+    this.vel.add(force);
+  }
+
+  //Bounce
+  this.wallHit = function(){
     if (this.x > width || this.x < 0){
       this.xSpeed *= -1;
     }
@@ -28,7 +47,7 @@ class IronMan {
   }
 
 //Iron Man's Aiming Style
-  displayMouse() {
+  this.displayMouse = function() {
     noCursor();
     noFill();
     strokeWeight(.5);
@@ -39,7 +58,7 @@ class IronMan {
 
 
 //Iron Man's Gun Style
-  mouseClicked() {
+  this.mouseClicked = function() {
     if (mouseIsPressed){
       push();
       strokeWeight(7);
@@ -62,7 +81,7 @@ class IronMan {
   }
 
 //Extra Information About Iron Man & Project
-  displayInfo (){
+  this.displayInfo = function(){
     fill(255);
     textFont('Helvetica');
     textSize(10);
@@ -80,7 +99,7 @@ class IronMan {
 
 
 //Iron Man's power to move
-  power() {
+  this.power = function() {
       switch (keyCode){
         case 87:
         this.ySpeed = this.ySpeed - 1;
