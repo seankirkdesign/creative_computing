@@ -14,7 +14,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
   haters = [];
-  for (var i = 0; i < 550; i++){
+  for (var i = 0; i < 400; i++){
     var hater = new Mover(createVector(random(width), random(height)));
     haters.push(hater);
   }
@@ -24,10 +24,11 @@ function setup() {
 }
 
 function draw() {
+  noCursor();
   //color
   r = map(bgColor.x, 0, windowWidth, 0, 255);
   g = map(bgColor.y, 0, windowHeight, 0, 255);
-  background(30, 30, 30, 10);
+  background(30);
 
   //This makes circle bounce
   bgColor.x = bgColor.x + bgColor.xSpeed
@@ -42,50 +43,50 @@ function draw() {
   }
 
 
-  addLoverForce();
-  addHaterForce();
+  // addLoverForce();
+  // addHaterForce();
 
-  fill(255);
-  textSize(14);
-  textFont('courier');
-  text("Move mouse to travel space.", 20, 40);
+  // fill(255);
+  // textSize(14);
+  // textFont('courier');
+  // text("Move mouse to travel space.", 20, 40);
 
 
   //Mouse: Lover
-  fill(255);
-  for (var i = 0; i < 25; i++){
-    lover.update();
-    lover.displayLover();
-    lover.checkBound();
-  }
+  // fill(255);
+  // for (var i = 0; i < 25; i++){
+  //   lover.updateLover();
+  //   lover.displayLover();
+  //   // lover.checkBound();
+  // }
 
 
   //Haters
   noStroke();
   fill(r, g, 100);
   for (var i = 0; i < haters.length; i++){
-    haters[i].update();
+    haters[i].updateHater();
     haters[i].displayHater();
     haters[i].checkBound();
   }
 }
 
-function addLoverForce() {
-  var haterLoc = createVector(mouseX, mouseY);
-  var loverLoc = lover.loc.copy();
-  var diffLoc = haterLoc.sub(loverLoc);
-  diffLoc.mult(0.003);
-  lover.applyForce(diffLoc);
-}
+// function addLoverForce() {
+//   var haterLoc = createVector(mouseX, mouseY);
+//   var loverLoc = lover.loc.copy();
+//   var diffLoc = haterLoc.sub(loverLoc);
+//   diffLoc.mult(0.003);
+//   lover.applyForce(diffLoc);
+// }
 
-function addHaterForce() {
-  for (var i = 0; i < haters.length; i++) {
-    var loverLoc = lover.loc.copy();
-    var haterLoc = haters[i].loc.copy();
-    var diff = haterLoc.sub(loverLoc);
-    if (diff.mag() < 40) {
-      diff.mult(0.52)
-      haters[i].applyForce(diff);
-    }
-  }
-}
+// function addHaterForce() {
+//   for (var i = 0; i < haters.length; i++) {
+//     var loverLoc = lover.loc.copy();
+//     var haterLoc = haters[i].loc.copy();
+//     var diff = haterLoc.sub(loverLoc);
+//     if (diff.mag() < 40) {
+//       diff.mult(0.52)
+//       haters[i].applyForce(diff);
+//     }
+//   }
+// }
