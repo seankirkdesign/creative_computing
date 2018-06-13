@@ -21,13 +21,13 @@ function draw () {
   myRandomNumX = random(width);
   myRandomNumY = random(height);
 
-  fill(255);
-  rect (80, 74, 300, 40);
-  fill(0);
-
-  textSize(20);
-  text('Click to Change Ellipse Size', 100, 100);
-  console.log("Ellipse")
+  // fill(255);
+  // rect (80, 74, 300, 40);
+  // fill(0);
+  //
+  // textSize(20);
+  // text('Click to Change Ellipse Size', 100, 100);
+  // console.log("Ellipse")
 }
 
 function mouseClicked() {
