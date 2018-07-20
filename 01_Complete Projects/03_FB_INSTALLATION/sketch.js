@@ -19,7 +19,7 @@ function Line(_x1, _y1, _x2, _y2) {
 
   this.draw = function() {
     noFill();
-    stroke(random(180,200), random(50,190), 110);
+    stroke(random(180,200), random(50,240), 110);
     line(this.x1, this.y1, this.x2, this.y2)
   }
 
