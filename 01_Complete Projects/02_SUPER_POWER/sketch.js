@@ -22,7 +22,7 @@ var mousePositions = [];
 var numOfMousePos = 15;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(1440, 900);
   ps = new ParticleSystem();
 
 }

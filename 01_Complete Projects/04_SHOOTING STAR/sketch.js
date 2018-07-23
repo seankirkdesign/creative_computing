@@ -11,7 +11,7 @@ var bgColor ={
 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(1440, 900);
 
   haters = [];
   for (var i = 0; i < 400; i++){

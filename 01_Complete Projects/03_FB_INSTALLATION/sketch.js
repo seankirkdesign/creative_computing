@@ -32,7 +32,7 @@ function Line(_x1, _y1, _x2, _y2) {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(1440, 900);
 }
 
 var circles = [];
