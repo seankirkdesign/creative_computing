@@ -1,7 +1,14 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(1400, 1024);
   colorMode(HSB, 100);
+  noCursor();
+
+
 }
+
+// function preload() {
+//   var myFont = loadFont('assets/SharpGroteskMediumItalic08.otf');
+// }
 
 function draw() {
   background(0);
@@ -19,6 +26,8 @@ function draw() {
     var spiralSize = 10 + i;
     x = width / 2 + Math.cos(angle) * spiralSize;
     y = height / 2 + Math.sin(angle) * spiralSize;
-    ellipse(x, y, size, size);
+    // ellipse(x, y, size, size);
+    // textFont(myFont);
+    text("Look At All These Things", x, y);
   }
 }
