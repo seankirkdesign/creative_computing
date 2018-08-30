@@ -17,8 +17,11 @@ class Rain {
     push();
     fill(255);
     rotate(90);
-    textSize(20);
+    textSize(200);
     textAlign(RIGHT);
+
+    stroke(0);
+    strokeWeight(25);
     textFont('IBM Plex Mono');
     text('look at all these things', this.y, this.x);
     // line(this.x, this.y, this.x, this.y + 10)

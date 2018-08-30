@@ -5,7 +5,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
 
-  for (var i = 0; i < 800; i++){
+  for (var i = 0; i < 300; i++){
     rains[i] = new Rain();
   }
 }
