@@ -6,7 +6,7 @@ var value = 245;
 
 
 function setup() {
-  createCanvas(1440, 900);
+  createCanvas(windowWidth, windowHeight);
   smooth();
   textFont('COURIER');
   for (var i=0; i<chars.length; i++) {
