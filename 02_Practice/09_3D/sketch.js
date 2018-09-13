@@ -7,19 +7,28 @@
 // Original GIF: https://beesandbombs.tumblr.com/post/149654056864/cube-wave
 
 let angle = 0;
-let w = 24;
+let w = 60;
 let ma;
 let maxD;
 
 function setup() {
-  createCanvas(400, 400, WEBGL);
+  createCanvas(1000, 1000, WEBGL);
   ma = atan(cos(QUARTER_PI));
   maxD = dist(0, 0, 200, 200);
 }
 
 function draw() {
-  background(100);
-  ortho(-400, 400, 400, -400, 0, 1000);
+  background(230);
+
+  r = map(mouseX, 0, windowWidth, 0, 255);
+  g = map(mouseY, 0, windowHeight, 0, 255);
+
+  var dirX = (mouseX / width - 0.5) * 2;
+  var dirY = (mouseY / height - 0.5) * 2;
+  directionalLight(mouseX, mouseY, 250, -dirX, -dirY, 1);
+  ambientMaterial(mouseX, mouseY, 250);
+
+  ortho(-800, 800, 800, -800, 0, 2000);
   rotateX(-ma);
   rotateY(-QUARTER_PI)﻿
 
@@ -30,13 +39,14 @@ function draw() {
       let offset = map(d, 0, maxD, -PI, PI);
       let a = angle + offset;
       let h = floor(map(sin(a), -1, 1, 100, 300));
+
       translate(x - width / 2, 0, z - height / 2);
-      normalMaterial();
+      // normalMaterial();
       box(w, h, w);
       //rect(x - width / 2 + w / 2, 0, w - 2, h);
       pop();
     }
   }
 
-  angle -= 0.1;
+  angle -= 0.07;
 }
