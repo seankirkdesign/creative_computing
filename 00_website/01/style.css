@@ -1,0 +1,89 @@
+/*Body CSS*/
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  /* max-width: 1400px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*Navigation CSS*/
+
+header {
+    padding: 20px 40px; // 20px 40px 20px 40px;
+}
+
+header .row,
+footer .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-weight: 700;
+  padding-bottom: 5px;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  /* float: right; */
+}
+
+header p {
+  /* display: flex; */
+  padding: 20px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+
+
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 900;
+  margin: 50%;
+  background-color: #ffffff;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.jumbotron a {
+  color: #EF4B4B;
+  font-weight: 500;
+}
+
+.jumbotron a:hover {
+  color: #EF4B4B;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.sean .jumbotron {
+  background-color: #F7F7F7;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  background-color: #F7F7F7;
+  padding: 100px 30px 100px 30px;
+
+}
+
+.portfolio-thumbnail {
+  background-color: #222222;
+}

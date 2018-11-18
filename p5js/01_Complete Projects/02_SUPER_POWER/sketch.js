@@ -22,7 +22,7 @@ var mousePositions = [];
 var numOfMousePos = 15;
 
 function setup() {
-  createCanvas(1440, 900);
+  createCanvas(windowWidth, windowHeight);
   ps = new ParticleSystem();
 
 }
@@ -58,6 +58,9 @@ function draw() {
     bgCircle.ySpeed = bgCircle.ySpeed * -1;
   }
 
+  textSize(15);
+  textAlign(CENTER);
+  text("Click to be a super hero.", width / 2 , height / 2);
   //bouncing circle
   noFill();
   noStroke();
@@ -81,6 +84,12 @@ function draw() {
   if (mouseIsPressed){
     noFill();
     circle.size = 55;
+    push();
+    fill(255);
+    textSize(15);
+    textAlign(CENTER);
+    text("Isn't it awesome?", width / 2 , height / 2)
+    pop();
   } else {
     circle.size = 15;
   }
