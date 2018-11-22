@@ -1,19 +1,25 @@
-/*Body CSS*/
-
+/*UNIVERSAL*/
 body{
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   /* max-width: 1400px; */
   margin: 100px auto;
   padding: 50px 0;
+  background-color: #F8F8F8;
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link, a:visited {
     text-decoration: none;
-    color: Red;
+    color: #FC1B53;
+    font-weight: 700;
 }
 
-/*Navigation CSS*/
+.sean a:hover {
+  color: #FC1B53;
+  text-decoration: none;
+}
+
+/* NAVIGATION */
 header {
     padding: 20px 40px; // 20px 40px 20px 40px;
 }
@@ -38,42 +44,52 @@ header nav {
   /* float: right; */
 }
 
-nav p {
+.navigation a {
   margin-left: 20px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  color: #aaa;
+}
+
+.container h1 a{
+  color: #FF0000;
 }
 
 
-/* Typography */
 
+/* Typography */
 p {
   font-size: 16px;
   font-weight: 400;
   word-spacing: 0.05em;
   line-height: 1.7;
+  color: #272727;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 900;
   margin: 50%;
 }
 
-.portfolio h2 {
-  color: Red;
+.portfolio-title h2{
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-h2 {
-  font-size: 24px;
+.sean .portfolio h2 a {
+  color: #000;
   font-weight: 500;
 }
 
 
-/* PORTFOLIO SECTION */
-
+/* HOMEPAGE */
 .container-main {
-  background-color: #ddd;
+  background-color: #fff;
   padding: 100px 100px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .portfolio {
@@ -94,7 +110,6 @@ h2 {
 
 
 /* CONTACT HTML */
-
 .contact {
   margin: 100px 0;
 }
