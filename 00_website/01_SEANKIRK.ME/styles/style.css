@@ -2,7 +2,7 @@
 body{
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  /* max-width: 1400px; */
+  max-width: 1400px;
   margin: 100px auto;
   padding: 50px 0;
   background-color: #F8F8F8;
@@ -14,14 +14,22 @@ a:link, a:visited {
     font-weight: 700;
 }
 
-.sean a:hover {
+.sean a:hover, .sean a:active{
   color: #FC1B53;
   text-decoration: none;
 }
 
 /* NAVIGATION */
+.sean .container-nav .col-sm-4 {
+  padding: 0 50px;
+}
+
 header {
-    padding: 20px 40px; // 20px 40px 20px 40px;
+    padding: 20px 0;
+}
+
+li {
+  list-style-type: none;
 }
 
 header .row,
@@ -31,29 +39,15 @@ footer .row {
   justify-content: space-between;
 }
 
-header h1 {
-  font-weight: 700;
-  padding-bottom: 5px;
-  margin: 0;
-}
-
-header nav {
-  display: flex;
-  justify-content: flex-end;
-  margin-left: 10px;
-  /* float: right; */
-}
 
 .navigation a {
-  margin-left: 20px;
-  display: inline-block;
   font-size: 15px;
   font-weight: 500;
   color: #aaa;
 }
 
-.container h1 a{
-  color: #FF0000;
+.site-logo {
+  max-width: 40px;
 }
 
 
@@ -67,10 +61,9 @@ p {
   color: #272727;
 }
 
-h1 {
-  font-size: 25px;
-  font-weight: 900;
-  margin: 50%;
+.sean h1 {
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .portfolio-title h2{
@@ -88,7 +81,7 @@ h1 {
 /* HOMEPAGE */
 .container-main {
   background-color: #fff;
-  padding: 100px 100px;
+  padding: 150px;
   margin-bottom: 30px;
 }
 
@@ -105,15 +98,29 @@ h1 {
 }
 
 .portfolio-project {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 
-/* CONTACT HTML */
+
+/* Contact */
 .contact {
   margin: 100px 0;
 }
 
-.contact-intro {
-  /* width: 450px; */
+.contact .contact-intro{
+  display: block;
+  margin: auto;
+}
+
+.contact .contact-intro {
+  padding: 0 50px;
+}
+
+.profile img{
+ width: auto;
+ height: 250px;
+ margin: 0 auto 100px;
+ display: block;
+ align-items: center;
 }
