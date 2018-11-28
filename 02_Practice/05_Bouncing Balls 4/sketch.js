@@ -27,7 +27,7 @@ function draw() {
     if (overlapping) {
       b.push();
     } else {
-      
+
     }
   }
 }

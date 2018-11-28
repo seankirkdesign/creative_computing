@@ -32,9 +32,7 @@ class Bubble {
     this.vel.mult(-1);
     this.acc.mult(-1);
     this.gra.mult(-0.9);
-    // Add velocity to the location.
     this.loc.add(this.vel);
-    // Add gravity to velocity
     this.vel.add(this.gra);
   }
 
@@ -62,11 +60,7 @@ class Bubble {
 
   contains(px, py) {
     let d = dist(px, py, this.loc.x, this.loc.y);
-    if (d < this.size) {
-      return true;
-    } else {
-      return false;
-    }
+    return (d < this.size);
   }
 
   move() {

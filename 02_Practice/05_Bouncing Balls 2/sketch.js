@@ -15,7 +15,7 @@ function setup() {
   // background(30);
 
   haters = [];
-  for (var i = 0; i < 1000; i++){
+  for (var i = 0; i < 100; i++){
     var hater = new Mover(createVector(random(width), random(height)));
     haters.push(hater);
   }
@@ -70,24 +70,26 @@ function draw() {
     haters[i].displayHater();
     haters[i].checkBound();
   }
+
+
 }
 
-// function addLoverForce() {
-//   var haterLoc = createVector(mouseX, mouseY);
-//   var loverLoc = lover.loc.copy();
-//   var diffLoc = haterLoc.sub(loverLoc);
-//   diffLoc.mult(0.003);
-//   lover.applyForce(diffLoc);
-// }
+function addLoverForce() {
+  var haterLoc = createVector(mouseX, mouseY);
+  var loverLoc = lover.loc.copy();
+  var diffLoc = haterLoc.sub(loverLoc);
+  diffLoc.mult(0.003);
+  lover.applyForce(diffLoc);
+}
 
-// function addHaterForce() {
-//   for (var i = 0; i < haters.length; i++) {
-//     var loverLoc = lover.loc.copy();
-//     var haterLoc = haters[i].loc.copy();
-//     var diff = haterLoc.sub(loverLoc);
-//     if (diff.mag() < 40) {
-//       diff.mult(0.52)
-//       haters[i].applyForce(diff);
-//     }
-//   }
-// }
+function addHaterForce() {
+  for (var i = 0; i < haters.length; i++) {
+    var loverLoc = lover.loc.copy();
+    var haterLoc = haters[i].loc.copy();
+    var diff = haterLoc.sub(loverLoc);
+    if (diff.mag() < 40) {
+      diff.mult(0.52)
+      haters[i].applyForce(diff);
+    }
+  }
+}

@@ -30,15 +30,15 @@ class Mover {
   // }
 
   // This makes haters bounce
-  // checkBound() {
-  //   if (this.loc.x > width || this.loc.x < 0) {
-  //     this.vel.x *= this.vel.x * -1;
-  //   }
-  //
-  //   if (this.loc.y > height || this.loc.y < 0) {
-  //     this.vel.y *= -1;
-  //   }
-  // }
+  checkBound() {
+    if (this.loc.x > width || this.loc.x < 0) {
+      this.vel.x *= this.vel.x * -1;
+    }
+
+    if (this.loc.y > height || this.loc.y < 0) {
+      this.vel.y *= -1;
+    }
+  }
 
   checkBound() {
     if (this.loc.x > width) {
