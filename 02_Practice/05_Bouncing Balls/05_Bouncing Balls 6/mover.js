@@ -2,11 +2,11 @@ class Mover {
   constructor(location){
     //rectMode(CENTER);
     this.loc = location;
-    this.size = random(windowWidth/30, windowHeight/30);
-    this.vel = createVector(1);
-    this.acc = createVector(random(-1, 1),random(-1, 1));
+    this.size = random(windowWidth/40, windowHeight/40);
+    this.vel = createVector(0.2);
+    this.acc = createVector(random(-1, 1), random(-1, 1));
     this.gra = createVector(0, 0);
-    this.color = random(0, 255);
+    this.color = random(70, 255);
   }
 
   addForce(force) {
@@ -16,8 +16,8 @@ class Mover {
   update() {
     this.vel.add(this.acc);
     this.loc.add(this.vel);
-    this.vel.mult(0.999);
-    this.acc.mult(random(0.01));
+    this.vel.mult(1);
+    this.acc.mult(0.002);
 
     // Add velocity to the location.
     this.loc.add(this.vel);
@@ -40,7 +40,7 @@ class Mover {
     translate(this.loc.x, this.loc.y);
     rotate(this.vel.heading());
     noStroke();
-    fill(230, this.color, 120);
+    fill(230, this.color, 80);
     ellipse(0, 0, this.size * 2);
     pop();
   }
