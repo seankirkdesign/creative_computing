@@ -43,10 +43,10 @@ function addLoveForce (){
         lovers[j].addForce(distBtwOtherLovers);
       }
     }
-    // var haterLoc = hater.loc.copy();
-    // var diff = haterLoc.sub(loverLoc);
-    // diff.mult(0.00001);
-    // lovers[i].addForce(diff);
+    var haterLoc = hater.loc.copy();
+    var diff = haterLoc.sub(loverLoc);
+    diff.mult(0.00005);
+    lovers[i].addForce(diff);
   }
 }
 
