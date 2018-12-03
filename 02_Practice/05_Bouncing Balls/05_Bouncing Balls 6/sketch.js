@@ -5,7 +5,7 @@ var hater;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   lovers = [];
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 40; i++) {
     var lover = new Mover(createVector(random(width), random(height)), 30, "😍");
     lovers.push(lover);
   }
@@ -14,7 +14,8 @@ function setup() {
 }
 
 function draw() {
-  background('#2283FF')
+  background(0, 120, 190, 10);
+  // background('#2283FF')
 
   addLoveForce();
   addHateForce();
@@ -36,15 +37,15 @@ function addLoveForce (){
     for (var j = i; j >= 0; j--) {
       var otherLoverLoc = lovers[j].loc.copy();
       var distBtwOtherLovers = otherLoverLoc.sub(loverLoc);
-      if (distBtwOtherLovers.mag() < (lovers[i].size * 2)) {
-        distBtwOtherLovers.mult(0.01);
+      if (distBtwOtherLovers.mag() < (lovers[i].size)) {
+        distBtwOtherLovers.mult(0.003);
         lovers[i].addForce(-distBtwOtherLovers);
         lovers[j].addForce(distBtwOtherLovers);
       }
     }
     // var haterLoc = hater.loc.copy();
     // var diff = haterLoc.sub(loverLoc);
-    // diff.mult(0.001);
+    // diff.mult(0.00001);
     // lovers[i].addForce(diff);
   }
 }
