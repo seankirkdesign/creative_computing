@@ -17,6 +17,7 @@ function draw() {
   background(0, 120, 190, 10);
   // background('#2283FF')
 
+  noCursor();
   addLoveForce();
   addHateForce();
 
@@ -42,16 +43,17 @@ function addLoveForce (){
         lovers[i].addForce(-distBtwOtherLovers);
         lovers[j].addForce(distBtwOtherLovers);
       }
+
     }
-    var haterLoc = hater.loc.copy();
-    var diff = haterLoc.sub(loverLoc);
-    diff.mult(0.00005);
-    lovers[i].addForce(diff);
+    // var haterLoc = hater.loc.copy();
+    // var diff = haterLoc.sub(loverLoc);
+    // diff.mult(0);
+    // lovers[i].addForce(diff);
   }
 }
 
 function addHateForce() {
-  var loverLoc = createVector(mouseX, mouseY);
+  var loverLoc = createVector(50, 50);
   var haterLoc = hater.loc.copy();
   var diffLoc = loverLoc.sub(haterLoc);
   diffLoc.mult(0.003);
