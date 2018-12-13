@@ -6,7 +6,8 @@ class Mover {
      this.gra = createVector(random(-0.015, 0.015), random(-0.015, 0.015));
      this.size = 50;
      this.color = random(70, 255);
-     this.angle = 0;
+
+     this.a = 0;
   }
 
   applyForce(force){
@@ -14,6 +15,8 @@ class Mover {
   }
 
   update() {
+    this.a = this.a + 1;
+
     this.vel.add(this.acc);
     this.loc.add(this.vel);
     this.vel.mult(0.98)
@@ -57,13 +60,14 @@ class Mover {
 
 
   displayHater(){
-      push();
+    rectMode(CENTER);
     fill(230, this.color, 80);
-    this.angle = this.angle + 0.1;
-    rotate(this.angle);
+    push();
     // ellipse(this.loc.x, this.loc.y, this.size, this.size);
-    rect(this.loc.x, this.loc.y, this.size, this.size);
-      pop();
+    translate(this.loc.x, this.loc.y)
+    rotate(this.a);
+    rect(0, 0, this.size, this.size);
+    pop();
   }
 
 }

@@ -1,6 +1,5 @@
 var lover;
 var haters;
-var angle = 0;
 // var song;
 
 // function preload() {
@@ -13,7 +12,6 @@ function setup() {
   angleMode(DEGREES);
   // song.setVolume(0.5);
   // song.play();
-
 
   haters = [];
   for (var i = 0; i < 30; i++) {
@@ -39,7 +37,6 @@ function draw() {
   noStroke();
 
   for (var i = 0; i < haters.length; i++) {
-    // haters[i].spin();
     haters[i].update();
     haters[i].displayHater();
     haters[i].checkBound();

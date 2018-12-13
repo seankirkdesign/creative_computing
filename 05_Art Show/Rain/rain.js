@@ -8,7 +8,7 @@ class Rain {
   fall(){
     this.y += this.yspeed;
 
-    if (this.y > height + 500){
+    if (this.y > height + 10){
       this.y = random(-height);
     }
   }
@@ -16,7 +16,7 @@ class Rain {
   show(){
     push();
     fill(255);
-    rotate(90);
+    rotate(45);
     textSize(20);
     textAlign(RIGHT);
     textFont('IBM Plex Mono');
