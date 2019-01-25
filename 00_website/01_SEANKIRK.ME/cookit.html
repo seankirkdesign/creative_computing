@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <head>
-  <title>sean</title>
+  <title>Sean Kim</title>
   <link rel="stylesheet" type="text/css" href="styles/style.css">
-  <script src="myscripts.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/lightbox.min.css">
+  <script src="styles/lightbox-plus-jquery.min.js"></script>
 </head>
 
 <body class="sean">
@@ -204,89 +205,21 @@ The biggest challenge while I'm working on this project was how to differentiate
           </section>
 
           <section class="container">
-              <div class="row">
-                <h1 class="text-center project-detail">Branding</h1>
-              </div>
-              <!-- Images used to open the lightbox -->
-              <!-- Images used to open the lightbox -->
-              <div class="row">
-                <div class="column">
-                  <img src="portfolio/cookit/06_01_technology.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            <div class="row">
+              <h1 class="text-center project-detail">Branding</h1>
+              <div class="text-center">
+                <div class="col-sm-4 lightbox-custom">
+                  <a class="example-image-link" href="portfolio/cookit/07_01_branding.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image lightbox-custom" src="portfolio/cookit/07_01_branding.png" alt=""/></a>
                 </div>
-                <div class="column">
-                  <img src="portfolio/cookit/06_01_technology.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                <div class="col-sm-4 lightbox-custom">
+                  <a class="example-image-link" href="portfolio/cookit/07_02_branding.png" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image lightbox-custom" src="portfolio/cookit/07_02_branding.png" alt="" /></a>
                 </div>
-                <div class="column">
-                  <img src="portfolio/cookit/06_01_technology.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
-                </div>
-                <div class="column">
-                  <img src="portfolio/cookit/06_01_technology.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                <div class="col-sm-4 lightbox-custom">
+                  <a class="example-image-link" href="portfolio/cookit/07_03_branding.png" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image lightbox-custom" src="portfolio/cookit/07_03_branding.png" alt="" /></a>
                 </div>
               </div>
-
-              <!-- The Modal/Lightbox -->
-              <div id="myModal" class="modal">
-                <span class="close cursor" onclick="closeModal()">&times;</span>
-                <div class="modal-content">
-
-                  <div class="mySlides">
-                    <div class="numbertext">1 / 4</div>
-                    <img src="portfolio/cookit/06_01_technology.png" style="width:100%">
-                  </div>
-
-                  <div class="mySlides">
-                    <div class="numbertext">2 / 4</div>
-                    <img src="portfolio/cookit/06_01_technology.png" style="width:100%">
-                  </div>
-
-                  <div class="mySlides">
-                    <div class="numbertext">3 / 4</div>
-                    <img src="portfolio/cookit/06_01_technology.png" style="width:100%">
-                  </div>
-
-                  <div class="mySlides">
-                    <div class="numbertext">4 / 4</div>
-                    <img src="portfolio/cookit/06_01_technology.png" style="width:100%">
-                  </div>
-
-                  <!-- Next/previous controls -->
-                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                  <!-- Caption text -->
-                  <div class="caption-container">
-                    <p id="caption"></p>
-                  </div>
-
-                  <!-- Thumbnail image controls -->
-                  <div class="column">
-                    <img class="demo" src="portfolio/cookit/06_01_technology.png" onclick="currentSlide(1)" alt="Nature">
-                  </div>
-
-                  <div class="column">
-                    <img class="demo" src="portfolio/cookit/06_01_technology.png" onclick="currentSlide(2)" alt="Snow">
-                  </div>
-
-                  <div class="column">
-                    <img class="demo" src="portfolio/cookit/06_01_technology.png" onclick="currentSlide(3)" alt="Mountains">
-                  </div>
-
-                  <div class="column">
-                    <img class="demo" src="portfolio/cookit/06_01_technology.png" onclick="currentSlide(4)" alt="Lights">
-                  </div>
-                </div>
-              </div>
+            </div>
           </section>
-
-
-
-
-
-
-
-
-
-
 
 
           <!-- Footer -->
