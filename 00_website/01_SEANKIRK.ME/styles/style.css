@@ -14,13 +14,20 @@ a:link, a:visited {
   font-weight: 500;
 }
 
-.sean a:hover, .sean a:active{
+.sean a:hover {
   color: #ff6b6b;
   text-decoration: none;
 }
 
-img {
+a:active {
+  color: #ff6b6b;
+  background-color: yellow;
+  text-decoration: none;
+}
+
+.sean img {
   max-width: 100%;
+    object-fit: cover;
 }
 
 /* NAVIGATION */
@@ -47,6 +54,7 @@ li {
   font-weight: 500;
   color: #aaa;
 }
+
 
 .site-logo {
   max-width: 40px;
@@ -142,6 +150,35 @@ p {
   object-fit: cover;
 }
 
+
+/* Portfolio Pages */
+
+.list-thumbnail {
+  height: 360px;
+  background-color: black;
+}
+
+.square-thumbnail {
+  height: 100%;
+}
+
+.thumbnail-name {
+  color: #000;
+  font-size: 13px;
+  font-weight: 400;
+  display:block;
+  align-items: center;
+  padding: 0 0 50px 0;
+}
+
+
+/* Footer Nav */
+.footer-nav {
+  color: #000;
+  font-size: 13px;
+  font-weight: 400;
+  display:block;
+}
 
 
 /* Contact */
