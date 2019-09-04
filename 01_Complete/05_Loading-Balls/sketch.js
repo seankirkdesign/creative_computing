@@ -21,7 +21,7 @@ function setup() {
   // song.play();
 
   haters = [];
-  for (var i = 0; i < 50; i++) {
+  for (var i = 0; i < 90; i++) {
     var hater = new Mover(createVector(random(width), random(height)));
     haters.push(hater);
   }
