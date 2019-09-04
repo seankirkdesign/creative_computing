@@ -3,9 +3,9 @@ class Mover {
      this.loc = location;
      this.vel = createVector(random(-0.5, 0.5), random(-0.5, 0.5));
      this.acc = createVector(0, 0);
-     this.gra = 0, 2;
+     this.gra = 0, 20;
      // this.gra = createVector(random(-0.015, 0.015), random(-0.015, 0.015));
-     this.size = 50;
+     this.size = 5;
      this.color = random(70, 255);
 
      this.mx = mouseX;
