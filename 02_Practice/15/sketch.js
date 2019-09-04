@@ -31,7 +31,7 @@ function setup() {
 
 
 function draw() {
-  background(240);
+  background(40);
 
   // push();
   // fill(120);
