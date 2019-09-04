@@ -3,7 +3,7 @@ class Mover {
      this.loc = location;
      this.vel = createVector(random(-0.5, 0.5), random(-0.5, 0.5));
      this.acc = createVector(0, 0);
-     this.gra = 0, 20;
+     this.gra = createVector(0, 20);
      // this.gra = createVector(random(-0.015, 0.015), random(-0.015, 0.015));
      this.size = 50;
      this.color = random(70, 255);
@@ -84,7 +84,7 @@ class Mover {
     push();
     translate(this.loc.x, this.loc.y);
     rotate(this.a);
-    image(loading, 0, 0, 40 * 5, 30 * 5);
+    image(loading, 0, 0, 40 * 2, 30 * 2);
     pop();
 
 
