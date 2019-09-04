@@ -84,7 +84,7 @@ class Mover {
     push();
     translate(this.loc.x, this.loc.y);
     rotate(this.a);
-    image(loading, 0, 0, 40 * 2, 30 * 2);
+    image(loading, 0, 0, 40 * 5, 30 * 5);
     pop();
 
 
