@@ -5,6 +5,7 @@ var loading;
 var cursor
 var song;
 
+
 function preload() {
   loading = loadImage('loading.png');
   cursor = loadImage('cursor.png');
@@ -20,7 +21,7 @@ function setup() {
   // song.play();
 
   haters = [];
-  for (var i = 0; i < 70; i++) {
+  for (var i = 0; i < 50; i++) {
     var hater = new Mover(createVector(random(width), random(height)));
     haters.push(hater);
   }
